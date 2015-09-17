@@ -1,0 +1,3 @@
+# META Stack
+
+META Stack is micro-services orchestration daemon with support of multi-master cluster configuration.

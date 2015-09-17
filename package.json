@@ -1,0 +1,21 @@
+{
+  "name": "meta-codebase",
+  "version": "1.0.0",
+  "description": "META Codebase website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metaplatform/meta-codebase.git"
+  },
+  "author": "META Platform team <www.meta-platfomr.com>",
+  "bugs": {
+    "url": "https://github.com/metaplatform/meta-codebase/issues"
+  },
+  "scripts": {
+    "doc": "./import_doc.sh; ./node_modules/.bin/meta-doc .",
+    "server": "./import_doc.sh; ./node_modules/.bin/meta-doc . -s -w"
+  },
+  "homepage": "https://github.com/metaplatform/meta-codebase",
+  "dependencies": {
+    "meta-doc": "^1.0.6"
+  }
+}

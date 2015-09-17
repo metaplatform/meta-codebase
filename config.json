@@ -1,0 +1,51 @@
+{
+    "title": "META Codebase",
+    "header_title": "<strong>META</strong> Codebase",
+    "description": "META Platform code documentation.",
+    "keywords": "meta, platform, code, reference, api, documentation",
+    "meta": {
+        "author": "META Platform team <www.meta-platform.com>"
+    },
+    "menu": [
+        {
+            "label": "Project homepage",
+            "link": "http://www.meta-platform.com/",
+            "target": "_blank"
+        },
+        {
+            "label": "Support",
+            "link": "{{base}}/meta/#10_Support"
+        }
+    ],
+    "footer_links": [
+        {
+            "label": "Privacy Policy",
+            "link": "{{base}}/meta/#40_Privacy_policy"
+        },
+        {
+            "label": "Report an issue",
+            "link": "{{base}}/meta/#20_Report_issue"
+        },
+        {
+            "label": "Contribute",
+            "link": "{{base}}/meta/#30_Contribute"
+        },
+        {
+            "label": "Support",
+            "link": "{{base}}/meta/#10_Support"
+        }
+    ],
+    "header_github": "https://github.com/metaplatform",
+    "header_github_label": "GitHub page",
+    "base_path": "",
+    "rewrite_base": "/",
+    "rewrite": {
+        "^metajs/components/template/*$": "libraries/meta-js/dom-template/",
+        "^metajs/components/view/*$": "libraries/meta-js/view/",
+        "^metajs/components/fragment-activity/*$": "libraries/meta-js/fragment-&-activity/",
+        "^metajs/components/channel/*$": "libraries/meta-js/channel/",
+        "^metajs/components/providers/*$": "libraries/meta-js/content-providers/",
+        "^metajs/components/utilities/*$": "libraries/meta-js/utilities/",
+        "^metajs/*": "libraries/meta-js/"
+    }
+}

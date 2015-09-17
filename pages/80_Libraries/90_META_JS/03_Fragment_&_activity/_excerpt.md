@@ -1,0 +1,3 @@
+## Fragment & Activity component
+
+Fragment and activity are using View and representing re-usable UI components.
