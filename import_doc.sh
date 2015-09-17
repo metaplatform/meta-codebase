@@ -1,3 +1,5 @@
+BASEDIR=`pwd`
+
 #Import repo function (doc_name, repository, doc_src_directory_relative_to_repo, doc_dst_directory_relative_to_current)
 function import_doc () {
 
@@ -9,7 +11,9 @@ function import_doc () {
 	#Check for repository
 	if [ -d "./temp/$1/.git" ]; then
 		echo "- Updating repository..."
-		git -C "./temp/$1" pull origin master
+		cd "./temp/$1"
+		git pull origin master
+		cd $BASEDIR
 	else
 		echo "- Cloning repository..."
 		git clone $2 "./temp/$1"
