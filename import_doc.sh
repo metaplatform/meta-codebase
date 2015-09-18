@@ -1,9 +1,10 @@
-BASEDIR=`pwd`
-
 #Import repo function (doc_name, repository, doc_src_directory_relative_to_repo, doc_dst_directory_relative_to_current)
 function import_doc () {
 
 	echo "Importing $1 ..."
+
+	#Save current basedir
+	BASEDIR=`pwd`
 
 	#Create directory
 	mkdir -p "./temp/$1"
@@ -18,6 +19,10 @@ function import_doc () {
 		echo "- Cloning repository..."
 		git clone $2 "./temp/$1"
 	fi
+
+	#Remove old pages
+	echo "- Cleaning old pages directory..."
+	rm -rf "./pages/$4"
 
 	#Link structure
 	echo "- Linking page directory..."
