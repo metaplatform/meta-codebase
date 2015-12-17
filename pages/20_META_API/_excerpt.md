@@ -1,3 +1,3 @@
 # META API
 
-Specification of HTTP API used by META Platform components.
+Specification of RPC + Pub/Sub API used by META Platform components.

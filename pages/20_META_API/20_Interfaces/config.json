@@ -1,4 +1,4 @@
 {
-	"icon": "code-tags",
+	"icon": "code-braces",
 	"description": "Specification of RPC + Pub/Sub API used by META Platform components."
 }
