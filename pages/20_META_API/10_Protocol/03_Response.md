@@ -34,7 +34,7 @@
 
 | Property name | Type | Description |
 | ------------- | ---- | ----------- |
-| r | integer | Request type - 202 = Subscribe successfull |
+| r | integer | Response type - 202 = Subscribe successfull |
 | i | string | Unique request ID for client. |
 
 ::: clear :::
@@ -50,7 +50,7 @@
 
 | Property name | Type | Description |
 | ------------- | ---- | ----------- |
-| r | integer | Request type - 203 = Unsubscribe successfull |
+| r | integer | Response type - 203 = Unsubscribe successfull |
 | i | string | Unique request ID for client. |
 
 ### Publish confirmation
@@ -59,22 +59,45 @@
 ```json
 {
 	"r": 204,
-	"i": "u36dHjkFr12"
+	"i": "u36dHjkFr12",
+	"c": 3
 }
 ```
 :::
 
 | Property name | Type | Description |
 | ------------- | ---- | ----------- |
-| r | integer | Request type - 204 = Publish request |
+| r | integer | Response type - 204 = Published |
 | i | string | Unique request ID for client. |
+| c | integer | Count of subscribers |
+
+### Incoming message
+
+:::sidecode
+```json
+{
+	"r": 205,
+	"c": "customerdb:/customers/42",
+	"d": {
+		"first_name": "John",
+		"last_name": "Doe"
+	},
+}
+```
+:::
+
+| Property name | Type | Description |
+| ------------- | ---- | ----------- |
+| r | integer | Response type - 205 = Incoming published message |
+| c | string | Channel name |
+| d | mixed | Published data |
 
 ### Authorization / registration request
 
 :::sidecode
 ```json
 {
-	"r": 205,
+	"r": 206,
 	"i": "u36dHjkFr42"
 }
 ```
@@ -82,7 +105,7 @@
 
 | Property name | Type | Description |
 | ------------- | ---- | ----------- |
-| r | integer | Request type - 205 = Authorization request |
+| r | integer | Response type - 206 = Authorization response |
 | i | string | Unique request ID for client. |
 
 ### Error response
@@ -103,7 +126,7 @@
 
 | Property name | Type | Description |
 | ------------- | ---- | ----------- |
-| r | integer | Request type - 205 = Authorization request |
+| r | integer | Response type - 500 = Generic error |
 | i | string | Unique request ID for client. |
 | e | string | Error name |
 | m | string | Error message |

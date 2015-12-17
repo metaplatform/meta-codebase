@@ -13,6 +13,11 @@
 | 202 | Subscription confirmation |
 | 203 | Unsubscribe confirmation |
 | 204 | Publish confirmation - message has been realiable equeued |
-| 205 | Authorization successfull |
+| 205 | Incoming published message |
+| 206 | Authorization successfull |
 | **Error response** ||
 | 500 | Generic error |
+
+::: warning
+Codes may change.
+:::
